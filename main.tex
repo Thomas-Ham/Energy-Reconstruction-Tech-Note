@@ -1,0 +1,88 @@
+%% For normal draft builds (figs undisplayed hence fast compile)
+%\documentclass[hyperpdf,nobind,draft,oneside]{hepthesis}
+%\documentclass[hyperpdf,nobind,draft,twoside]{hepthesis}
+
+%% For short draft builds (breaks citations by necessity)
+%documentclass[hyperpdf,nobind,draft,hidefrontback]{hepthesis}
+
+%%For Cambridge soft-bound version
+%\documentclass[hyperpdf,bindnopdf]{hepthesis}
+%% For Cambridge hard-bound version (must be one-sided)
+%\documentclass[hyperpdf,oneside]{hepthesis}
+%%Get rid of warnings about list of figures and tables but also remove from ToC
+\documentclass[hyperpdf,oneside,notlot,notlof]{hepthesis}
+
+%% Load special font packages here if you wish
+%\usepackage{lmodern}
+%\usepackage{mathpazo}
+%\usepackage{euler}
+
+%% Put package includes etc. into preamble.tex for convenience
+\input{preamble}
+
+%% You can set the line spacing this way
+%\setallspacing{double}
+%% or a section at a time like this
+%\setfrontmatterspacing{double}
+
+
+%% Define the thesis title and author
+\title{Energy Reconstruction Tech Note}
+\author{All the authors..}
+
+%% Doc-specific PDF metadata
+\makeatletter
+\@ifpackageloaded{hyperref}{%
+\hypersetup{%
+  pdftitle = {Search for Sterile Neutrinos at the SBN program},
+  pdfsubject = {Andy Buckley's PhD thesis},
+  pdfkeywords = {LHCb, B, physics, LHC, heavy flavour},
+  pdfauthor = {}
+}}{}
+\makeatother
+
+% Redeclare the \EquationRef command so it uses \ref instead of \eqnref
+\DeclareRobustCommand{\EquationRef}{Equation \ref}
+
+%\titleformat{\chapter}[display]
+%  {\normalfont\bfseries}{}{0pt}{\Huge}
+%\titlespacing*{\chapter}
+%  {0pt}{20pt}{40pt}
+
+%% Start the document
+\begin{document}
+
+%% Define the un-numbered front matter (cover pages, rubrik and table of contents)
+\begin{frontmatter}
+  \input{frontmatter}
+\end{frontmatter}
+
+%% Start the content body of the thesis
+\begin{mainmatter}
+  %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
+  \input{chap1-Introduction}
+  \input{chap2-Motivation}
+  \input{chap3-Method}
+  \input{chap4-Validation}
+  \input{chap5-AdditionalStudies}
+  \input{chap6-Conclusion}
+  %% To ignore a specific chapter while working on another, making the build faster, comment it out:
+  %\input{chap4}
+\end{mainmatter}
+
+%% Produce the appendices
+\begin{appendices}
+  \input{appendices}
+\end{appendices}
+
+%% Produce the un-numbered back matter (e.g. colophon,
+%% bibliography, tables of figures etc., index...)
+\begin{backmatter}
+  \input{backmatter}
+\end{backmatter}
+
+
+
+
+%% Close
+\end{document}
