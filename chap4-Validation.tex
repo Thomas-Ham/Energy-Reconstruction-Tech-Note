@@ -5,11 +5,11 @@ Samples:
 \begin{itemize}
     \item \textcolor{green}{Standard BNB $\electron \pi^+$}
     \item \textcolor{green}{Standard BNB $\gamma \pi^+$}
-    \item \textcolor{red}{Standard BNB cheating $\electron \pi^+$}
-    \item \textcolor{green}{SCE cheating cathode BNB $\electron \pi^+$}
-    \item \textcolor{red}{SCE cheating anode BNB $\electron \pi^+$}
+    \item \textcolor{green}{Standard BNB cheating $\electron \pi^+$}
+    \item \textcolor{orange}{SCE cheating cathode BNB $\electron \pi^+$}
+    \item \textcolor{orange}{SCE cheating anode BNB $\electron \pi^+$}
     \item \textcolor{green}{XZ plane cheating $\electron \pi^+$ - may need to remake with uniform angular dist.}
-    \item \textcolor{red}{YZ plane cheating $\electron \pi^+$}
+    \item \textcolor{green}{YZ plane cheating $\electron \pi^+$}
     \item \textcolor{red}{Standard BNB with lower thresholding $\electron \pi^+$}
     \item \textcolor{red}{Some low energy sample}
 \end{itemize}
@@ -17,21 +17,24 @@ Samples:
 \begin{figure}
     \centering
     \fbox{Fractional resolution using $\electron \pi^+$ BNB vertex sample for plane 0}
-    \caption{Caption}
+    \includegraphics[width = \largefigwidth]{Figures/fractional_res_standard_electron_vertex_plane0.pdf}
+    \caption{Fractional resolution of the shower energy from an $\electron \pi^+$ vertex sample. Reconstruction performed from the hits collected by plane 0.}
     \label{fig:my_label}
 \end{figure}
 
 \begin{figure}
     \centering
     \fbox{Fractional resolution using $\electron \pi^+$ BNB vertex sample for plane 1}
-    \caption{Caption}
+    \includegraphics[width = \largefigwidth]{Figures/fractional_res_standard_electron_vertex_plane1.pdf}
+    \caption{Fractional resolution of the shower energy from an $\electron \pi^+$ vertex sample. Reconstruction performed from the hits collected by plane 1.}
     \label{fig:my_label}
 \end{figure}
 
 \begin{figure}
     \centering
     \fbox{Fractional resolution using $\electron \pi^+$ BNB vertex sample for plane 2}
-    \caption{Caption}
+    \includegraphics[width = \largefigwidth]{Figures/fractional_res_standard_electron_vertex_plane2.pdf}
+    \caption{Fractional resolution of the shower energy from an $\electron \pi^+$ vertex sample. Reconstruction performed from the hits collected by plane 2.}
     \label{fig:my_label}
 \end{figure}
 
@@ -44,14 +47,29 @@ Samples:
 
 \begin{figure}
     \centering
-    \fbox{Fractional resolution using $\gamma \pi^+$ BNB vertex sample}
-    \caption{Fractional resolution using a $\gamma \pi^+$ BNB vertex sample (prodsingle\_gamma\_pi+\_bnblike.fcl)}
+    \fbox{Fractional resolution using $\electron \pi^+$ BNB vertex sample with cheated pattern recognition.}
+    \includegraphics[width = \largefigwidth]{Figures/fractional_res_standard_cheating_electron_vertex_plane2.pdf}
+    \caption{Fractional resolution of the shower energy from an $\electron \pi^+$ vertex sample with cheated pattern recognition. Reconstruction performed from the hits collected by plane 2.}
     \label{fig:my_label}
 \end{figure}
 
 \begin{figure}
     \centering
-    \fbox{Fractional resolution using $\electron \pi^+$ BNB vertex sample with cheated pattern recognition.}
+    \fbox{Fractional resolution using $\gamma \pi^+$ BNB vertex sample}
+    \includegraphics[width = \largefigwidth]{Figures/fractional_res_standard_gamma_vertex_plane2.pdf}
+    \caption{Fractional resolution of the shower energy using a $\gamma \pi^+$ vertex sample. Reconstruction performed from the hits collected by plane 2.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{
+    \begin{minipage}{0.8\textwidth}
+    Space Charge validation. Fractional resolution plot for cathode sample w.o. SCE, w. SCE but no correction and w. SCE + correction. Plus include ratio plot.
+    Use cheated pattern recognition. \newline
+    
+    \end{minipage}
+    }
     \caption{Caption}
     \label{fig:my_label}
 \end{figure}
@@ -60,17 +78,14 @@ Samples:
     \centering
     \fbox{
     \begin{minipage}{0.8\textwidth}
-    Space Charge validation. Fractional resolution plot for sample w.o. SCE, w. SCE but no correction and w. SCE + correction. Plus include ratio plot.
+    Space Charge validation. Fractional resolution plot for anode sample w.o. SCE, w. SCE but no correction and w. SCE + correction. Plus include ratio plot.
     Use cheated pattern recognition. \newline
     
-    *** Turns out frac. res. plots look identical even when using double space charge and a cathode sample where the effect should be maximal.. Could maybe show some sort of ratio to make the point that there is a 'correction' for SCE, but not sure how to validate since it seems like there isn't really anything to validate since the effect is negligible? ***
     \end{minipage}
     }
     \caption{Caption}
     \label{fig:my_label}
 \end{figure}
-
-
 
 
 
